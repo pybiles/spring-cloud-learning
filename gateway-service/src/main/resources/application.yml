@@ -16,4 +16,4 @@ zuul:
   routes:
     consumer-service: /consumer/**
     # 表示禁用所有的路由，只认我自己的路由
-    ignored-services: "*"
+  ignored-services: "*"

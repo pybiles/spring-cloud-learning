@@ -2,16 +2,16 @@ package com.yjx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * EurekaServerApp启动类
  */
 @SpringBootApplication
-@EnableEurekaServer
-public class EurekaServerApp {
+@EnableDiscoveryClient
+public class NacosProviderApp {
     public static void main(String[] args) {
 
-        SpringApplication.run(EurekaServerApp.class, args);
+        SpringApplication.run(NacosProviderApp.class, args);
     }
 }

@@ -16,7 +16,7 @@
     <name>ali-cloud-parent</name>
     <description>ali-cloud-parent</description>
     <modules>
-        <module>eureka-server</module>
+        <module>nacos-provider</module>
         <module>provider-service</module>
         <module>consumer-service</module>
         <module>gateway-service</module>
@@ -30,12 +30,20 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
-        <mysql-jdbc-version>8.0.30</mysql-jdbc-version>
-        <org.projectlombok-version>1.18.20</org.projectlombok-version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
+        <mysql-jdbc.version>8.0.30</mysql-jdbc.version>
+        <org.projectlombok.version>1.18.20</org.projectlombok.version>
     </properties>
     <!--    依赖的声明-->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -53,12 +61,12 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql-jdbc-version}</version>
+                <version>${mysql-jdbc.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>${org.projectlombok-version}</version>
+                <version>${org.projectlombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

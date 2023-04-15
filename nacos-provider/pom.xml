@@ -7,10 +7,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>eureka-server</artifactId>
+    <artifactId>nacos-provider</artifactId>
     <packaging>jar</packaging>
 
-    <name>eureka-server</name>
+    <name>nacos-provider</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -19,8 +19,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
         <dependency>
