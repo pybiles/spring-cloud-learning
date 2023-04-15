@@ -1,0 +1,12 @@
+#端口号
+server:
+  port: 8080
+#springCloud名
+spring:
+  application:
+    name: provider-service
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka

@@ -17,6 +17,7 @@
     <description>ali-cloud-parent</description>
     <modules>
         <module>eureka-server</module>
+        <module>provider-service</module>
     </modules>
 
     <!--统一的版本-->
