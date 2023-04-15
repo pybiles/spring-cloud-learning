@@ -18,8 +18,4 @@ public class FeignController {
         return providerFeignClient.hello(name);
     }
 
-    @RequestMapping("/sayHi")
-    public User sayHi(User user) {
-        return providerFeignClient.sayHi(user);
-    }
 }
