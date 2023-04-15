@@ -20,6 +20,7 @@
         <module>provider-service</module>
         <module>consumer-service</module>
         <module>gateway-service</module>
+        <module>common</module>
     </modules>
 
     <!--统一的版本-->
@@ -30,6 +31,7 @@
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR9</spring-cloud.version>
         <mysql-jdbc-version>8.0.30</mysql-jdbc-version>
+        <org.projectlombok-version>1.18.20</org.projectlombok-version>
     </properties>
     <!--    依赖的声明-->
     <dependencyManagement>
@@ -52,6 +54,11 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-jdbc-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${org.projectlombok-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
