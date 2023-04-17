@@ -20,3 +20,5 @@ spring:
         file-extension: yaml
         # 声明组
         group: yjx
+        #声明namespace,填写id 而不是名称
+        namespace: 6735357d-3d1a-443b-9769-5b3ce3b4fa4b
