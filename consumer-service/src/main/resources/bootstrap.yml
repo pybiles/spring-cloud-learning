@@ -1,0 +1,20 @@
+#端口号
+server:
+  port: 9090
+#springCloud名
+spring:
+  application:
+    name: consumer-service
+  #引入叫dev的其它配置文件
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      #注册中心
+      discovery:
+        server-addr: localhost:8848
+      #配置中心
+      config:
+        server-addr: localhost:8848
+        #文件后缀名过滤
+        file-extension: yaml
