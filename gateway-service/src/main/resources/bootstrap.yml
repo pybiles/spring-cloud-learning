@@ -9,11 +9,6 @@ spring:
   profiles:
     active: dev
   cloud:
-    #网关
-    gateway:
-      discovery:
-        locator:
-          enabled: true
     nacos:
       #注册中心
       discovery:
@@ -21,5 +16,17 @@ spring:
       #配置中心
       config:
         server-addr: localhost:8848
-        #文件后缀名过滤
-        file-extension: yaml
+    #网关
+    gateway:
+      #路由
+      routes:
+        #id表示一段路由规则的唯一标志
+        - id: cookie_router
+          #定义服务的访问地址，可以是nacos上的服务 格式：lb://服务名 也可以是：http：//
+          uri: lb://consumer-service
+          #谓词规则 断言
+          predicates:
+            - Path=/gateway/**
+          #一组过滤器
+          filters:
+            - StripPrefix=1
